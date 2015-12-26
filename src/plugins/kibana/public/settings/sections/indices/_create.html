@@ -2,10 +2,8 @@
   <kbn-settings-indices>
     <div ng-controller="settingsIndicesCreate" class="kbn-settings-indices-create">
       <div class="page-header">
-        <h1>Configure an index pattern</h1>
-        In order to use Kibana you must configure at least one index pattern. Index patterns are
-        used to identify the Elasticsearch index to run search and analytics against. They are also
-        used to configure fields.
+        <h1>配置索引模式</h1>
+	为了使用此系统，你必须至少配置一个索引模式，用于识别Elasticsearch索引以运行搜索以及分析。另外，模式也被用于fields部分的配置。
       </div>
       <div>
         <form name="form" role="form" class="well" ng-submit="createIndexPattern()">
@@ -14,21 +12,20 @@
               <input
                 ng-model="index.isTimeBased"
                 type="checkbox">
-              Index contains time-based events
+              索引包含基于时间的事件
             </label>
             <br>
             <label ng-if="index.isTimeBased">
               <input ng-model="index.nameIsPattern" type="checkbox">
-              Use event times to create index names <small>[DEPRECATED]</small>
+	      使用事件时间来创建索引名字 <small>[DEPRECATED]</small>
             </label>
           </div>
 
           <div class="form-group" ng-if="index.isTimeBased && index.nameIsPattern">
             <div class="alert alert-warning">
-              <h4>Time-interval based index patterns are deprecated!</h4>
+              <h4>基于时间间隔的索引模式是过时的，将来可能不再使用！</h4>
               <p>
-                We <strong>strongly recommend</strong> using wildcard pattern names instead of
-                time-interval based index patterns.
+                我们 <strong>强烈建议</strong> 使用通配符索引名来替代基于时间间隔的索引模式。
               </p>
               <p>
                 Kibana is now smart enough to automatically determine which
