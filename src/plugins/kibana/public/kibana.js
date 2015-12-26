@@ -31,22 +31,22 @@ chrome
 .setTabs([
   {
     id: 'discover',
-    title: 'Discover'
+    title: '发现'
   },
   {
     id: 'visualize',
-    title: 'Visualize',
+    title: '视图',
     activeIndicatorColor: function () {
       return (String(this.lastUrl).indexOf('/visualize/step/') === 0) ? 'white' : '#656a76';
     }
   },
   {
     id: 'dashboard',
-    title: 'Dashboard'
+    title: '仪表板'
   },
   {
     id: 'settings',
-    title: 'Settings'
+    title: '设置'
   }
 ])
 .setRootController('kibana', function ($scope, $rootScope, courier, config) {
