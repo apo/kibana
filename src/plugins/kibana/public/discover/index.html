@@ -23,24 +23,24 @@
     </form>
 
     <div class="button-group" role="toolbar">
-      <kbn-tooltip text="New Search" placement="bottom" append-to-body="1">
+      <kbn-tooltip text="新的查询" placement="bottom" append-to-body="1">
         <button
           ng-click="newQuery()"
-          aria-label="New Search">
+          aria-label="新的查询">
           <i aria-hidden="true" class="fa fa-file-new-o"></i>
         </button>
       </kbn-tooltip>
-      <kbn-tooltip text="Save Search" placement="bottom" append-to-body="1">
+      <kbn-tooltip text="保存查询" placement="bottom" append-to-body="1">
         <button
           ng-click="configTemplate.toggle('save');"
           ng-class="{active: configTemplate.is('save')}"
           aria-haspopup="true"
           aria-expanded="{{ configTemplate.is('save') }}"
-          aria-label="Save Search">
+          aria-label="保存查询">
           <i aria-hidden="true" class="fa fa-save"></i>
         </button>
       </kbn-tooltip>
-      <kbn-tooltip text="Load Saved Search" placement="bottom" append-to-body="1">
+      <kbn-tooltip text="加载保存的查询" placement="bottom" append-to-body="1">
         <button
           aria-haspopup="true"
           aria-expanded="{{ configTemplate.is('load') }}"
@@ -78,7 +78,7 @@
         <div class="discover-info">
           <span ng-show="opts.savedSearch.id" class="discover-info-title">
             <span ng-bind="::opts.savedSearch.title"></span>
-            <i aria-label="Reload Saved Search" tooltip="Reload Saved Search" ng-click="resetQuery();" class="fa fa-undo small"></i>
+            <i aria-label="重新加载保存的查询" tooltip="重新加载保存的查询" ng-click="resetQuery();" class="fa fa-undo small"></i>
           </span>
 
           <strong class="discover-info-hits">{{(hits || 0) | number:0}}</strong>
@@ -90,7 +90,7 @@
           <div ng-show="resultState === 'none'">
               <div class="col-md-10 col-md-offset-1">
 
-                <h1>No results found <i aria-hidden="true" class="fa fa-meh-o"></i></h1>
+                <h1>没有查找到任何结果 <i aria-hidden="true" class="fa fa-meh-o"></i></h1>
 
                 <p>
                   Unfortunately I could not find any results matching your search. I tried really hard. I looked all over the place and frankly, I just couldn't find anything good. Help me, help you. Here are some ideas:

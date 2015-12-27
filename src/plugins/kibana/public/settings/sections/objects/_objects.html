@@ -1,12 +1,12 @@
 <kbn-settings-app section="objects">
   <kbn-settings-objects class="container">
     <div class="header">
-      <h2 class="title">Edit Saved Objects</h2>
-      <button class="btn btn-default controls" ng-click="exportAll()"><i aria-hidden="true" class="fa fa-download"></i> Export Everything</button>
-      <button file-upload="importAll(fileContents)" class="btn btn-default controls" ng-click><i aria-hidden="true" class="fa fa-upload"></i> Import</button>
+      <h2 class="title">编辑已保存对象</h2>
+      <button class="btn btn-default controls" ng-click="exportAll()"><i aria-hidden="true" class="fa fa-download"></i> 导出所有对象</button>
+      <button file-upload="importAll(fileContents)" class="btn btn-default controls" ng-click><i aria-hidden="true" class="fa fa-upload"></i> 导入</button>
     </div>
     <p>
-      From here you can delete saved objects, such as saved searches. You can also edit the raw data of saved objects. Typically objects are only modified via their associated application, which is probably what you should use instead of this screen. Each tab is limited to 100 results. You can use the filter to find objects not in the default list.
+      在此页面, 可删除已保存的对象, 如已保存的查询. 也能编辑已保存对象的原始数据. 一般情况下, 仅能通过与其关联的应用来修改这些对象. 可使用过滤器来查找不在缺省列表中的对象.
     </p>
     <form role="form">
       <input aria-label="Filter" ng-model="advancedFilter" class="form-control span12" type="text" placeholder="Filter"/>
@@ -29,11 +29,11 @@
         </label>
         <a ng-disabled="selectedItems.length == 0"
           confirm-click="bulkDelete()"
-          confirmation="Are you sure want to delete the selected {{currentTab.title}}? This action is irreversible!"
-          class="btn btn-xs btn-danger" aria-label="Delete"><i aria-hidden="true" class="fa fa-trash"></i> Delete</a>
+          confirmation="确定要删除已选择 {{currentTab.title}}? 此动作是不可逆的!"
+          class="btn btn-xs btn-danger" aria-label="删除"><i aria-hidden="true" class="fa fa-trash"></i> 删除</a>
         <a ng-disabled="selectedItems.length == 0"
           ng-click="bulkExport()"
-          class="btn btn-xs btn-default" aria-label="Export"><i aria-hidden="true" class="fa fa-download"></i> Export</a>
+          class="btn btn-xs btn-default" aria-label="导出"><i aria-hidden="true" class="fa fa-download"></i> 导出</a>
       </div>
       <div ng-repeat="service in services" ng-class="{ active: state.tab === service.title }" class="tab-pane">
         <ul class="list-unstyled">
@@ -42,8 +42,8 @@
               <button
                 ng-click="edit(service, item)"
                 class="btn btn-default"
-                aria-label="Edit">
-                <span class="sr-only">Edit</span>
+                aria-label="编辑">
+                <span class="sr-only">编辑</span>
                 <i aria-hidden="true" class="fa fa-pencil"></i>
               </button>
 
@@ -51,7 +51,7 @@
                 ng-click="open(item)"
                 class="btn btn-info"
                 aria-label="Hide">
-                <span class="sr-only">Hide</span>
+                <span class="sr-only">隐藏</span>
                 <i aria-hidden="true" class="fa fa-eye"></i>
               </button>
             </div>
@@ -67,7 +67,7 @@
               <a ng-click="edit(service, item)">{{ item.title }}</a>
             </div>
           </li>
-          <li ng-if="!service.data.length" class="empty">No "{{service.title}}" found.</li>
+          <li ng-if="!service.data.length" class="empty">没有找到 "{{service.title}}" .</li>
         </ul>
       </div>
     </div>

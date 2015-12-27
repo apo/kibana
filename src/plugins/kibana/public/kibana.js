@@ -42,7 +42,7 @@ chrome
   },
   {
     id: 'dashboard',
-    title: '仪表板'
+    title: '仪表盘'
   },
   {
     id: 'settings',

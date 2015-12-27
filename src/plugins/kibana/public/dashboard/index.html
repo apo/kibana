@@ -31,12 +31,12 @@
     </form>
 
     <div class="button-group" role="toolbar">
-      <kbn-tooltip text="New Dashboard" placement="bottom" append-to-body="1">
-        <button ng-click="newDashboard()" aria-label="New Dashboard"><i aria-hidden="true" class="fa fa-file-new-o"></i></button>
+      <kbn-tooltip text="创建仪表盘" placement="bottom" append-to-body="1">
+        <button ng-click="newDashboard()" aria-label="新仪表盘"><i aria-hidden="true" class="fa fa-file-new-o"></i></button>
       </kbn-tooltip>
-      <kbn-tooltip text="Save Dashboard" placement="bottom" append-to-body="1">
+      <kbn-tooltip text="保存仪表盘" placement="bottom" append-to-body="1">
         <button
-          aria-label="Save Dashboard"
+          aria-label="保存仪表盘"
           aria-haspopup="true"
           aria-expanded="{{ configTemplate.is('save') }}"
           ng-class="{active: configTemplate.is('save')}"
@@ -44,9 +44,9 @@
           <i aria-hidden="true" class="fa fa-save"></i>
         </button>
       </kbn-tooltip>
-      <kbn-tooltip text="Load Saved Dashboard" placement="bottom" append-to-body="1">
+      <kbn-tooltip text="加载保存的仪表盘" placement="bottom" append-to-body="1">
         <button
-          aria-label="Load Saved Dashboard"
+          aria-label="加载保存的仪表盘"
           aria-haspopup="true"
           aria-expanded="{{ configTemplate.is('load') }}"
           ng-class="{active: configTemplate.is('load')}"
@@ -54,9 +54,9 @@
           <i aria-hidden="true" class="fa fa-folder-open-o"></i>
         </button>
       </kbn-tooltip>
-      <kbn-tooltip text="Share" placement="bottom" append-to-body="1">
+      <kbn-tooltip text="共享" placement="bottom" append-to-body="1">
         <button
-          aria-label="Share Dashboard"
+          aria-label="共享仪表盘"
           aria-haspopup="true"
           aria-expanded="{{ configTemplate.is('share') }}"
           ng-class="{active: configTemplate.is('share')}"
@@ -64,9 +64,9 @@
           <i aria-hidden="true" class="fa fa-external-link"></i>
         </button>
       </kbn-tooltip>
-      <kbn-tooltip text="Add Visualization" placement="bottom" append-to-body="1">
+      <kbn-tooltip text="添加视图" placement="bottom" append-to-body="1">
         <button
-          aria-label="Add Visualization"
+          aria-label="添加视图"
           aria-haspopup="true"
           aria-expanded="{{ configTemplate.is('pickVis') }}"
           ng-class="{active: configTemplate.is('pickVis')}"
@@ -74,9 +74,9 @@
           <i aria-hidden="true" class="fa fa-plus-circle"></i>
         </button>
       </kbn-tooltip>
-      <kbn-tooltip text="Options" placement="bottom" append-to-body="1">
+      <kbn-tooltip text="选项" placement="bottom" append-to-body="1">
         <button
-          aria-label="Options"
+          aria-label="选项"
           aria-haspopup="true"
           aria-expanded="{{ configTemplate.is('options') }}"
           ng-class="{active: configTemplate.is('options')}"
@@ -93,7 +93,7 @@
 
   <div ng-show="!state.panels.length" class="text-center start-screen">
     <h2>开始使用?</h2>
-    <p>点击右上 <a class="btn btn-xs navbtn-inverse" ng-click="configTemplate.open('pickVis'); toggleAddVisualization = !toggleAddVisualization" aria-label="Add visualization"><i aria-hidden="true" class="fa fa-plus-circle"></i></a> 按钮添加新视图到仪表板。<br/>如果你已经创建过视图，可以点击访问<a href="#/visualize" title="Visualize">“视图”</a>标签建立你的第一个仪表盘。</p>
+    <p>点击右上 <a class="btn btn-xs navbtn-inverse" ng-click="configTemplate.open('pickVis'); toggleAddVisualization = !toggleAddVisualization" aria-label="Add visualization"><i aria-hidden="true" class="fa fa-plus-circle"></i></a> 按钮添加新视图到仪表盘。<br/>如果你已经创建过视图，可以点击访问<a href="#/visualize" title="Visualize">“视图”</a>标签建立你的第一个仪表盘。</p>
   </div>
 
   <dashboard-grid></dashboard-grid>

@@ -7,28 +7,28 @@
     <button
       ng-if="setDefault"
       ng-click="setDefault()"
-      tooltip="Set as default index"
+      tooltip="设置为缺省索引"
       class="btn btn-success">
-      <span class="sr-only">Set as default index</span>
+      <span class="sr-only">设置为缺省索引</span>
       <i aria-hidden="true" class="fa fa-star"></i>
     </button>
     <button
       ng-if="refreshFields"
       confirm-click="refreshFields()"
-      confirmation="This will reset the field popularity counters. Are you sure you want to reload your fields?"
-      tooltip="Refresh field list"
+      confirmation="这会复位字段流行度计数值. 确定要重新加载字段吗?"
+      tooltip="刷新字段列表"
       class="btn btn-warning">
-      <span class="sr-only">Reload field list</span>
+      <span class="sr-only">重新加载字段列表</span>
       <i aria-hidden="true" class="fa fa-refresh"></i>
     </button>
     <button
       ng-if="delete"
       confirm-click="delete()"
-      aria-label="Remove index pattern"
-      confirmation="Are you sure you want to remove this index pattern?"
-      tooltip="Remove index pattern"
+      aria-label="删除索引模式"
+      confirmation="确定要删除此索引模式?"
+      tooltip="删除索引模式"
       class="btn btn-danger">
-      <span class="sr-only">Remove index pattern</span>
+      <span class="sr-only">删除索引模式</span>
       <i aria-hidden="true" class="fa fa-trash"></i>
     </button>
   </div>
