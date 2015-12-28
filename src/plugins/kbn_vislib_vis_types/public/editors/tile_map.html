@@ -1,6 +1,6 @@
 <!-- vis type specific options -->
 <div class="form-group">
-  <label>Map type</label>
+  <label>地图类型</label>
     <select name="agg"
     class="form-control"
     ng-model="vis.params.mapType"
@@ -13,8 +13,8 @@
 <div ng-if="vis.params.mapType === 'Heatmap'" class="form-group">
   <div>
     <label>
-      Radius
-      &nbsp;<kbn-info placement="right" info="Size of heatmap dots. Default: 25"></kbn-info>
+      半径
+      &nbsp;<kbn-info placement="right" info="热图点的大小. 缺省: 25"></kbn-info>
     </label>
     <div class="vis-editor-agg-form-row">
       <input
@@ -34,8 +34,8 @@
   </div>
   <div>
     <label>
-      Blur
-      &nbsp;<kbn-info placement="right" info="Amount of blur applied to dots. Default: 15"></kbn-info>
+      模糊
+      &nbsp;<kbn-info placement="right" info="点上所应用的模糊量. 缺省: 15"></kbn-info>
     </label>
     <div class="vis-editor-agg-form-row">
       <input
@@ -55,8 +55,8 @@
   </div>
   <div>
     <label>
-      Maximum zoom
-      &nbsp;<kbn-info placement="right" info="Map zoom at which all dots are displayed at full intensity. Default: 16"></kbn-info>
+      最大缩放
+      &nbsp;<kbn-info placement="right" info="所有点都以完整强度显示的地图缩放. 缺省: 16"></kbn-info>
     </label>
     <div class="vis-editor-agg-form-row">
       <input
@@ -76,8 +76,8 @@
   </div>
   <div>
     <label>
-      Minimum opacity
-      &nbsp;<kbn-info placement="right" info="Minimum opacity of dots. Default: 0.1"></kbn-info>
+      最小不透明值
+      &nbsp;<kbn-info placement="right" info="点的最小不透明值. 缺省: 0.1"></kbn-info>
     </label>
     <div class="vis-editor-agg-form-row">
       <input
@@ -99,7 +99,7 @@
   <div class="form-group">
     <label>
       <input type="checkbox" ng-model="vis.params.addTooltip">
-      Show Tooltip
+      显示提示信息
     </label>
   </div>
 </div>
@@ -111,9 +111,9 @@
     ng-disabled="!vis.type.params.canDesaturate"
     ng-model="vis.params.isDesaturated">
 
-    Desaturate map tiles
+    降低地图瓦片饱和度
 
-    <kbn-info info="Reduce the vibrancy of tile colors, this does not work in any version of Internet Explorer"></kbn-info>
+    <kbn-info info="降低瓦片颜色的亮度(vibrancy), 此在任何版本的Internet浏览器中不起作用"></kbn-info>
   </label>
 </div>
 
@@ -123,9 +123,9 @@
     name="wms.enabled"
     ng-model="vis.params.wms.enabled">
 
-    WMS compliant map server
+    WMS 兼容地图服务器
 
-    <kbn-info info="Use WMS compliant map tile server. For advanced users only."></kbn-info>
+    <kbn-info info="使用 WMS 兼容地图瓦片服务器. 仅对高级用户."></kbn-info>
   </label>
 </div>
 
@@ -133,8 +133,8 @@
   <div class="vis-option-item form-group">
     
     <p>
-      WMS maps are 3rd party mapping services that have not been verified to work with Kibana. 
-      These should be considered expert settings.
+      WMS 地图是第三方地图服务, 需要验证其兼容性. 
+      这些应被视为专家级设置.
     </p>
 
     <label>
@@ -147,7 +147,7 @@
 
   <div class="vis-option-item form-group">
     <label>
-      WMS layers* <kbn-info info="A comma seperated list of layers to use."></kbn-info>
+      WMS 层* <kbn-info info="逗号分割的要使用的层列表"></kbn-info>
     </label>
     <input type="text" class="form-control"
       ng-require="vis.params.wms.enabled"
@@ -157,7 +157,7 @@
 
   <div class="vis-option-item form-group">
     <label>
-      WMS version* <kbn-info info="The version of WMS the server supports"></kbn-info>
+      WMS 版本* <kbn-info info="服务器支持的 WMS 版本"></kbn-info>
     </label>
     <input type="text" class="form-control"
       name="wms.options.version"
@@ -166,7 +166,7 @@
 
   <div class="vis-option-item form-group">
     <label>
-      WMS format* <kbn-info info="Usually image/png or image/jpeg. Use png if the server will return transparent layers"></kbn-info>
+      WMS 格式* <kbn-info info="通常 image/png 或 image/jpeg. 若服务器返回透明层则使用 png "></kbn-info>
     </label>
     <input type="text" class="form-control"
       name="wms.options.format"
@@ -175,7 +175,7 @@
   
   <div class="vis-option-item form-group">
     <label>
-      WMS attribution <kbn-info info="Attribution string for the lower right corner<"></kbn-info>
+      WMS 归属 <kbn-info info="右下角归属串<"></kbn-info>
     </label>
     <input type="text" class="form-control"
       name="wms.options.attribution"
@@ -184,14 +184,14 @@
 
   <div class="vis-option-item form-group">
     <label>
-      WMS styles* <kbn-info info="A comma seperated list of WMS server supported styles to use. Blank in most cases."></kbn-info>
+      WMS 样式* <kbn-info info="逗号分割的所使用的 WMS 服务器支持样式列表. 多数情况下为空."></kbn-info>
     </label>
     <input type="text" class="form-control"
       name="wms.options.styles"
       ng-model="vis.params.wms.options.styles">    
   </div>
 
-  <p>* if this parameter is incorrect, maps will fail to load.</p>
+  <p>* 若此参数不正确, 地图会加载失败.</p>
 
 
 </div>

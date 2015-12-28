@@ -2,7 +2,7 @@ module.exports = function (kibana) {
   return new kibana.Plugin({
     uiExports: {
       app: {
-        title: 'Server Status',
+        title: '服务器状态',
         main: 'plugins/statusPage/statusPage',
         hidden: true,
         url: '/status',

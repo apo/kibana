@@ -9,7 +9,7 @@ var chrome = require('ui/chrome')
 .setTabs([
   {
     id: '',
-    title: 'Server Status',
+    title: '服务器状态',
     activeIndicatorColor: '#EFF0F2'
   }
 ])
@@ -43,7 +43,7 @@ var chrome = require('ui/chrome')
     })
     .catch(function () {
       if (ui.fetchError) return;
-      ui.fetchError = notify.error('Failed to request server ui. Perhaps your server is down?');
+      ui.fetchError = notify.error('不能请求服务器UI. 服务器可能关闭?');
       ui.metrics = ui.statuses = ui.overall = null;
     })
     .then(function () {

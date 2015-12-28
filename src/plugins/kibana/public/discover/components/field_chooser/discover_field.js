@@ -34,19 +34,19 @@ define(function (require) {
             }
 
             if (field.analyzed && field.type === 'string') {
-              warnings.push('This is an analyzed string field.' +
-                ' Analyzed strings are highly unique and can use a lot of memory to visualize.' +
-                ' Values such as foo-bar will be broken into foo and bar.');
+              warnings.push('这是一个被分析的字符串字段.' +
+                ' 被分析的字符串是唯一的, 会使用大量内存来可视化.' +
+                ' 诸如foo-bar这样的值会被拆分为 foo 和 bar.');
             }
 
             if (!field.indexed) {
-              warnings.push('This field is not indexed and can not be visualized.');
+              warnings.push('此字段不能被索引且不能被可视化.');
             }
           }
 
 
           if (field.scripted) {
-            warnings.push('Scripted fields can take a long time to execute.');
+            warnings.push('脚本化字段会占用较长时间来执行.');
           }
 
           if (warnings.length > 1) {

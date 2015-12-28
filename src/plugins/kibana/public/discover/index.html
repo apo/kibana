@@ -93,46 +93,46 @@
                 <h1>没有查找到任何结果 <i aria-hidden="true" class="fa fa-meh-o"></i></h1>
 
                 <p>
-                  Unfortunately I could not find any results matching your search. I tried really hard. I looked all over the place and frankly, I just couldn't find anything good. Help me, help you. Here are some ideas:
+                  抱歉, 未能查找到与搜索相匹配的任何结果. 下面是一些提示:
                 </p>
 
                 <div class="shard-failures" ng-show="failures">
-                  <h3>Shard Failures</h3>
-                  <p>The following shard failures ocurred:</p>
+                  <h3>分区故障</h3>
+                  <p>发生了下面的分区故障:</p>
                   <ul>
                     <li ng-repeat="failure in failures | limitTo: failuresShown"><strong>Index:</strong> {{failure.index}} <strong>Shard:</strong> {{failure.shard}} <strong>Reason:</strong> {{failure.reason}} </li>
                   </ul>
-                  <a ng-click="showAllFailures()" ng-if="failures.length > failuresShown" title="Show More">Show More</a>
-                  <a ng-click="showLessFailures()" ng-if="failures.length === failuresShown && failures.length > 5" title="Show Less">Show Less</a>
+                  <a ng-click="showAllFailures()" ng-if="failures.length > failuresShown" title="显示更多">显示更多</a>
+                  <a ng-click="showLessFailures()" ng-if="failures.length === failuresShown && failures.length > 5" title="显示更少">显示更少</a>
                 </div>
 
                 <div ng-show="opts.timefield">
                   <p>
-                    <h3>Expand your time range</h3>
-                    <p>I see you are looking at an index with a date field. It is possible your query does not match anything in the current time range, or that there is no data at all in the currently selected time range. Click the button below to open the time picker. For future reference you can open the time picker by clicking the <a class="btn btn-xs navbtn" ng-click="toggleTimepicker(); toggledTimepicker = !toggledTimepicker" aria-expanded="{{toggledTimepicker}}" aria-label="time picker">time picker <i aria-hidden="true" class="fa fa-clock-o"></i></a> in the top right corner of your screen.
+                    <h3>扩展时间范围</h3>
+                    <p>你正在查看具有日期字段的索引. 很可能查询未能匹配当前时间范围内的任何结果, 或在当前所选择时间范围内根本没有数据. 点击下面的按钮打开时间提取器. 也可点击屏幕右上角的 <a class="btn btn-xs navbtn" ng-click="toggleTimepicker(); toggledTimepicker = !toggledTimepicker" aria-expanded="{{toggledTimepicker}}" aria-label="时间提取器">时间提取器 <i aria-hidden="true" class="fa fa-clock-o"></i></a> 打开时间提取器.
                   </p>
                 </div>
 
-                <h3>Refine your query</h3>
+                <h3>细化你的检索</h3>
                 <p>
-                  The search bar at the top uses Elasticsearch's support for Lucene <a href="http://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax" target="_blank">Query String syntax</a>. Let's say we're searching web server logs that have been parsed into a few fields.
+                  顶部的查询栏使用Elasticsearch对Lucene的支持 <a href="http://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax" target="_blank">检索串语法</a>. 下面以解析为若干字段的Web服务器日志来说明.
                 </p>
 
                 <p>
-                  <h4>Examples:</h4>
-                  Find requests that contain the number 200, in any field:
+                  <h4>示例:</h4>
+                  在任何字段中查找包含值为200的请求:
                   <pre>200</pre>
 
-                  Or we can search in a specific field. Find 200 in the status field:
+                  或查找特定的字段. 在字段 status 中查找200:
                   <pre>status:200</pre>
 
-                  Find all status codes between 400-499:
+                  查找在400-499之间的所有状态码:
                   <pre>status:[400 TO 499]</pre>
 
-                  Find status codes 400-499 with the extension php:
+                  查找带有扩展名 php 的状态码:
                   <pre>status:[400 TO 499] AND extension:PHP</pre>
 
-                  Or HTML
+                  或 HTML
                   <pre>status:[400 TO 499] AND (extension:php OR extension:html)</pre>
                 </p>
 
@@ -142,7 +142,7 @@
           <!-- loading -->
           <div ng-show="resultState === 'loading'">
             <div class="discover-overlay">
-              <h2>Searching</h2>
+              <h2>查询</h2>
               <div class="spinner large"></div>
               <div ng-show="fetchStatus">{{fetchStatus.complete}}/{{fetchStatus.total}}</div>
             </div>
@@ -153,7 +153,7 @@
             <div class="discover-timechart" ng-if="opts.timefield">
               <header>
                 <center class="small">
-                  <span tooltip="To change the time, click the clock icon in the navigation bar">{{timeRange.from | moment}} - {{timeRange.to | moment}}</span>
+                  <span tooltip="点击导航条中的时钟图标改变时间">{{timeRange.from | moment}} - {{timeRange.to | moment}}</span>
 
                   &mdash;
 

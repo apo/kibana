@@ -2,10 +2,10 @@
   <td class="name">
     <b>{{conf.name}}</b>
     <span class="smaller" ng-show="!conf.isCustom && conf.value !== undefined">
-      (Default: <i>{{conf.defVal == undefined ? 'null' : conf.defVal}}</i>)
+      (缺省: <i>{{conf.defVal == undefined ? 'null' : conf.defVal}}</i>)
     </span>
     <span class="smaller" ng-show="conf.isCustom">
-      (Custom setting)
+      (定制设置)
     </span>
     <br>
     <span class="smaller" ng-bind-html="conf.description | trustAsHtml"></span>

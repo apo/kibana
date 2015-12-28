@@ -11,7 +11,7 @@ module.exports = function (kibana) {
 
     uiExports: {
       app: {
-        title: 'Kibana',
+        title: '聆云',
         description: '聆云日志分析',
         //icon: 'plugins/kibana/settings/sections/about/barcode.svg',
         main: 'plugins/kibana/kibana',
