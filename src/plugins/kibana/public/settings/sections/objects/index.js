@@ -10,7 +10,7 @@ define(function (require) {
 
   return {
     name: 'objects',
-    display: 'Objects',
+    display: '对象',
     url: '#/settings/objects'
   };
 });

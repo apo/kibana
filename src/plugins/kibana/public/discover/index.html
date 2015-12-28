@@ -9,13 +9,13 @@
             input-focus
             kbn-typeahead-input
             ng-model="state.query"
-            placeholder="Search..."
-            aria-label="Search input"
+            placeholder="查询..."
+            aria-label="查询输入"
             type="text"
             class="form-control">
           <button type="submit"
             ng-disabled="discoverSearch.$invalid"
-            aria-label="Search">
+            aria-label="查询">
             <span aria-hidden="true" class="fa fa-search"></span></button>
         </div>
         <kbn-typeahead-items></kbn-typeahead-items>
@@ -46,7 +46,7 @@
           aria-expanded="{{ configTemplate.is('load') }}"
           ng-click="configTemplate.toggle('load');"
           ng-class="{active: configTemplate.is('load')}"
-          aria-label="Load Saved Search">
+          aria-label="加载保存的查询">
           <i aria-hidden="true" class="fa fa-folder-open-o"></i>
         </button>
       </kbn-tooltip>
@@ -191,9 +191,8 @@
 
               <div ng-if="rows.length == opts.sampleSize" class="discover-table-footer">
                 <center>
-                  These are the first {{opts.sampleSize}} documents matching
-                  your search, refine your search to see others.
-                  <a ng-click="toTop()" title="Back to top">Back to top.</a>
+                  这些是与查询匹配的第一 {{opts.sampleSize}} 文档, 重新定义查询以查看其它文档.
+                  <a ng-click="toTop()" title="回到顶部">回到顶部.</a>
                 </center>
               </div>
             </div>

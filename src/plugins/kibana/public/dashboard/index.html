@@ -13,14 +13,14 @@
 
           <input
             type="text"
-            placeholder="Filter..."
-            aria-label="Filter input"
+            placeholder="过滤器..."
+            aria-label="过滤器输入"
             class="form-control"
             ng-model="state.query"
             input-focus
             kbn-typeahead-input
             parse-query>
-          <button type="submit" class="btn btn-default" ng-disabled="queryInput.$invalid" aria-label="Filter dashboards">
+          <button type="submit" class="btn btn-default" ng-disabled="queryInput.$invalid" aria-label="过滤器仪表盘">
             <span aria-hidden="true" class="fa fa-search"></span>
           </button>
         </div>
@@ -93,7 +93,7 @@
 
   <div ng-show="!state.panels.length" class="text-center start-screen">
     <h2>开始使用?</h2>
-    <p>点击右上 <a class="btn btn-xs navbtn-inverse" ng-click="configTemplate.open('pickVis'); toggleAddVisualization = !toggleAddVisualization" aria-label="Add visualization"><i aria-hidden="true" class="fa fa-plus-circle"></i></a> 按钮添加新视图到仪表盘。<br/>如果你已经创建过视图，可以点击访问<a href="#/visualize" title="Visualize">“视图”</a>标签建立你的第一个仪表盘。</p>
+    <p>点击右上 <a class="btn btn-xs navbtn-inverse" ng-click="configTemplate.open('pickVis'); toggleAddVisualization = !toggleAddVisualization" aria-label="添加视图"><i aria-hidden="true" class="fa fa-plus-circle"></i></a> 按钮添加新视图到仪表盘。<br/>如果你已经创建过视图，可以点击访问<a href="#/visualize" title="Visualize">“视图”</a>标签建立你的第一个仪表盘。</p>
   </div>
 
   <dashboard-grid></dashboard-grid>

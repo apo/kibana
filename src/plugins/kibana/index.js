@@ -12,7 +12,7 @@ module.exports = function (kibana) {
     uiExports: {
       app: {
         title: 'Kibana',
-        description: 'the kibana you know and love',
+        description: '聆云日志分析',
         //icon: 'plugins/kibana/settings/sections/about/barcode.svg',
         main: 'plugins/kibana/kibana',
         uses: [

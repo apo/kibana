@@ -9,7 +9,7 @@
       在此页面, 可删除已保存的对象, 如已保存的查询. 也能编辑已保存对象的原始数据. 一般情况下, 仅能通过与其关联的应用来修改这些对象. 可使用过滤器来查找不在缺省列表中的对象.
     </p>
     <form role="form">
-      <input aria-label="Filter" ng-model="advancedFilter" class="form-control span12" type="text" placeholder="Filter"/>
+      <input aria-label="过滤器" ng-model="advancedFilter" class="form-control span12" type="text" placeholder="过滤器"/>
     </form>
 
     <ul class="nav nav-tabs">
@@ -25,7 +25,7 @@
       <div class="action-bar">
         <label>
           <input type="checkbox" ng-checked="currentTab.data.length > 0 && selectedItems.length == currentTab.data.length" ng-click="toggleAll()" />
-          Select All
+          全选
         </label>
         <a ng-disabled="selectedItems.length == 0"
           confirm-click="bulkDelete()"
@@ -50,7 +50,7 @@
               <button
                 ng-click="open(item)"
                 class="btn btn-info"
-                aria-label="Hide">
+                aria-label="隐藏">
                 <span class="sr-only">隐藏</span>
                 <i aria-hidden="true" class="fa fa-eye"></i>
               </button>

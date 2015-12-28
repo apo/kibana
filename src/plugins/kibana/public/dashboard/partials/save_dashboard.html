@@ -1,7 +1,7 @@
 <form ng-submit="opts.save()" role="form">
   <div class="form-group">
-    <label for="dashboardTitle">Save As</label>
-    <input id="dashboardTitle" type="text" ng-model="opts.dashboard.title" class="form-control" placeholder="Dashboard title" input-focus="select">
+    <label for="dashboardTitle">另存为</label>
+    <input id="dashboardTitle" type="text" ng-model="opts.dashboard.title" class="form-control" placeholder="仪表盘标题" input-focus="select">
   </div>
   <div class="form-group">
     <label>
@@ -10,5 +10,5 @@
       <kbn-info info="当加载仪表盘时，将时间过滤器设置为当前选择的时间"></kbn-info>
     </label>
   </div>
-  <button type="submit" ng-disabled="!opts.dashboard.title" class="btn btn-primary" aria-label="Save dashboard">Save</button>
+  <button type="submit" ng-disabled="!opts.dashboard.title" class="btn btn-primary" aria-label="保存仪表盘">保存</button>
 </form>

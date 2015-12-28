@@ -4,7 +4,7 @@ define(function (require) {
   return {
     order: 3,
     name: 'status',
-    display: 'Status',
+    display: '状态',
     url: '/status'
   };
 });

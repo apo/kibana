@@ -2,9 +2,9 @@
   <kbn-settings-objects-view class="container">
     <div class="pull-right" style="margin-top: 20px;">
       <a href="{{ link }}" class="btn btn-primary">View {{ title }}</a>
-      <a confirm-click="delete()" class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete {{ title }} Object</a>
+      <a confirm-click="delete()" class="btn btn-danger"><i class="fa fa-trash-o"></i> 删除 {{ title }} 对象</a>
     </div>
-    <h1>Edit {{ title }} Object</h1>
+    <h1>编辑 {{ title }} 对象</h1>
     <div class="bs-callout bs-callout-danger" ng-if="notFound">
       <h4>已保存的对象存有问题</h4>
 
@@ -15,7 +15,7 @@
       <p>若你知道此错误，可继续并修改它 - 否则点击上面的删除按钮.</p>
     </div>
     <div class="bs-callout bs-callout-warning">
-      <h4>Proceed with caution</h4>
+      <h4>慎重进行</h4>
 
       <p>修改对象仅为高级用户使用. 对象属性未被验证以及非法的对象会引起错误, 数据丢失甚至更糟.</p>
     </div>
@@ -29,8 +29,8 @@
       </div>
     </form>
     <div class="form-group">
-      <button aria-label="Cancel" class="btn btn-primary" ng-click="cancel()">Cancel</button>
-      <button aria-label="Save {{ title }} Object" class="btn btn-success" ng-click="submit()" ng-disabled="objectForm.$invalid || aceInvalidEditors.length !==0">Save {{ title }} Object</button>
+      <button aria-label="取消" class="btn btn-primary" ng-click="cancel()">取消</button>
+      <button aria-label="保存 {{ title }} 对象" class="btn btn-success" ng-click="submit()" ng-disabled="objectForm.$invalid || aceInvalidEditors.length !==0">保存 {{ title }} 对象</button>
     </div>
   </kbn-settings-objects-view>
 </kbn-settings-app>
