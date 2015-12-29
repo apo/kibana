@@ -100,7 +100,7 @@
                   <h3>分区故障</h3>
                   <p>发生了下面的分区故障:</p>
                   <ul>
-                    <li ng-repeat="failure in failures | limitTo: failuresShown"><strong>Index:</strong> {{failure.index}} <strong>Shard:</strong> {{failure.shard}} <strong>Reason:</strong> {{failure.reason}} </li>
+                    <li ng-repeat="failure in failures | limitTo: failuresShown"><strong>索引:</strong> {{failure.index}} <strong>分区:</strong> {{failure.shard}} <strong>原因:</strong> {{failure.reason}} </li>
                   </ul>
                   <a ng-click="showAllFailures()" ng-if="failures.length > failuresShown" title="显示更多">显示更多</a>
                   <a ng-click="showLessFailures()" ng-if="failures.length === failuresShown && failures.length > 5" title="显示更少">显示更少</a>
@@ -113,7 +113,7 @@
                   </p>
                 </div>
 
-                <h3>细化你的检索</h3>
+                <h3>细化检索</h3>
                 <p>
                   顶部的查询栏使用Elasticsearch对Lucene的支持 <a href="http://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax" target="_blank">检索串语法</a>. 下面以解析为若干字段的Web服务器日志来说明.
                 </p>

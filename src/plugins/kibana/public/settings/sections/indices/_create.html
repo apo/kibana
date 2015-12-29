@@ -3,7 +3,7 @@
     <div ng-controller="settingsIndicesCreate" class="kbn-settings-indices-create">
       <div class="page-header">
         <h1>配置索引模式</h1>
-	为了使用此系统，你必须至少配置一个索引模式，用于识别Elasticsearch索引以运行搜索以及分析。另外，模式也被用于fields部分的配置。
+	为了使用此系统，你必须至少配置一个索引模式，用于识别Elasticsearch索引以运行搜索以及分析。另外，模式也被用于字段部分的配置。
       </div>
       <div>
         <form name="form" role="form" class="well" ng-submit="createIndexPattern()">
@@ -28,16 +28,14 @@
                 我们 <strong>强烈建议</strong> 使用通配符索引名来替代基于时间间隔的索引模式。
               </p>
               <p>
-                Kibana is now smart enough to automatically determine which
-                indices to search against within the current time range for
-                wildcard index patterns. This means that wildcard
-                index patterns now get the same performance optimizations when
-                searching within a time range as time-interval patterns.
+                本系统能自动确定, 对于通配符索引模式, 当前时间范围内查询的索引.
+                这表明, 在作为时间周期模式的时间范围内搜索, 通配符索引模式能
+                得到相同的性能优化.
               </p>
             </div>
             <label>
-              Index pattern interval&nbsp;
-              <kbn-info info="The interval at which index names rotate."></kbn-info>
+              索引模式周期&nbsp;
+              <kbn-info info="索引名称轮询的周期."></kbn-info>
             </label>
             <select
               required
@@ -64,9 +62,9 @@
               type="text"
               class="form-control">
               <small ng-show="index.nameInterval.name == 'weeks'">
-                <strong>Note: </strong>
-                I noticed you're using weekly indices. Kibana requires ISO weeks be used in your index creation.
-                See <a href="https://en.wikipedia.org/wiki/ISO_week_date" target="_blank" title="Wikipedia: ISO Week Date">Wikipedia: ISO Week Date</a>
+                <strong>注意: </strong>
+                注意正在使用周索引. 本系统要求在索引创建中使用 ISO 周的形式.
+                查看 <a href="https://en.wikipedia.org/wiki/ISO_week_date" target="_blank" title="Wikipedia: ISO 周日期">Wikipedia: ISO 周日期</a>
               </small>
             </div>
 
@@ -86,7 +84,7 @@
             </div>
 
             <div class="alert alert-{{index.existing.class}}" ng-if="index.existing">
-              Pattern matches {{index.existing.matchPercent}} of existing indices and aliases
+              模式匹配现有索引和别名的 {{index.existing.matchPercent}}
               <ul>
                 <li ng-repeat="match in index.existing.matches | orderBy:'toString()'| limitTo: index.sampleCount">{{match}}</li>
               </ul>

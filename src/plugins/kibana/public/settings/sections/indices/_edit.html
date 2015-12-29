@@ -20,10 +20,10 @@
 					来改变字段类型.
         </p>
         <div ng-if="indexPattern.timeFieldName && indexPattern.intervalName" class="alert alert-info">
-          This index uses a <strong>Time-based index pattern</strong> which repeats <span ng-bind="::indexPattern.getInterval().display"></span>
+          此索引使用一个 <strong>基于时间的索引模式</strong> , 会重复 <span ng-bind="::indexPattern.getInterval().display"></span>
         </div>
         <div ng-if="conflictFields.length" class="alert alert-warning">
-          <strong>Mapping conflict!</strong> {{conflictFields.length > 1 ? conflictFields.length : 'A'}} field{{conflictFields.length > 1 ? 's' : ''}} {{conflictFields.length > 1 ? 'are' : 'is'}} defined as several types (string, integer, etc) across the indices that match this pattern. You may still be able to use these conflict fields in parts of Kibana, but they will be unavailable for functions that require Kibana to know their type. Correcting this issue will require reindexing your data.
+          <strong>映射冲突!</strong> {{conflictFields.length > 1 ? conflictFields.length : 'A'}} 字段{{conflictFields.length > 1 ? 's' : ''}} {{conflictFields.length > 1 ? 'are' : 'is'}} 在与此模式匹配的索引中被定义为若干类型 (string, integer等). 虽仍然能使用这些冲突字段, 但是在某些要求获知其类型的功能上就不可用. 更正此问题会要求重新对数据进行索引.
         </div>
       </div>
 
