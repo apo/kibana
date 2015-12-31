@@ -47,6 +47,11 @@ chrome
   {
     id: 'settings',
     title: '设置'
+  },
+  {
+    id: 'logout',
+    title: '退出',
+    baseUrl: '/users/sign_out'
   }
 ])
 .setRootController('kibana', function ($scope, $rootScope, courier, config) {
